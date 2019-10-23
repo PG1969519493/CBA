@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+		<link rel="stylesheet" href="../css/login.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+		<script>
+			function getLogin(){
+				var xhr=new XMLHttpRequest();
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var result=xhr.responseText;
+						if(result==1){
+							alert("登录成功");
+                            location.href="http://127.0.0.1:5500/shouye.html";
+                            }
+                            
+						else
+							alert("登录失败");
+					}
+				}
+				var $phone=phone.value;
+				var $upwd=upwd.value;
+				
+
+				xhr.open("get",`/user/api/v1/login/${$phone}&${$upwd}`,true);
+				xhr.send(null);
+			}
+			function phone_show(){
+				var $phone=phone.value;
+				if($phone==""){
+					msg.innerHTML="手机号或邮箱不能为空"
+				}else
+                    msg.innerHTML="";
+			}
+		</script>
+
+</head>
+<body>
+<div id="ym">
+    <div class="header d-flex justify-content-around ">
+        <div>
+            <ul class="d-flex justify-content-around m-4">
+               <li><a href="">首页</a></li>
+            <li><a href="">视频</a></li>
+            <li><a href="">新闻</a></li>
+            <li><a href="">图集</a></li>
+            <li><a href="">赛程</a></li>
+            <li><a href="">数据</a></li>
+            <li><a href="">NBA历史</a></li>
+            <li><a href="">NBA知识</a></li>
+            <li><a href="">全明星赛</a></li>
+            </ul>
+        </div>
+        <div class="p-4">
+            <img src="image/search_24px.png" alt=""/>
+            <span>
+                <a href="reg.html">注册</a>
+                |
+                <a href="#">登录</a>
+            </span>
+        </div>
+    </div>
+    <div class="section">
+        <div></div>
+        <div id="kk">
+            <div >
+              <div class="" id="login_h"><h4 >登录</h4></div>
+							<div>
+								<div class="" id="bb" style="height:20px;"><span id="msg"></span></div>
+								<input  class="zc" id="phone" type="phone" placeholder="邮箱或手机号" onblur="phone_show()">
+							</div>
+							<div>
+								<input  class="zc" id="upwd" type="password"  placeholder="密码" >
+							</div>
+							<div><button class="w-100 btn btn-primary" onclick="getLogin()">登陆</button>	</div>
+							<div class="float-right clearfix " id="zt2">
+								<a href="#">忘记密码</a>
+								|
+								<a href="/reg.html">注册</a>
+							</div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <div class="clearfix">
+                <div class="float-left" id="fa">
+                    <a href="#" id="fta">关于我们</a>
+					<span>|</span>
+					<a href="#" id="fta2">招聘信息</a>
+					<span>|</span>
+					<a href="#" id="fta3">联系我们</a>
+					<span>|</span>
+					<a href="#" id="fta4">商务合作</a>
+				</div>
+				<div> <span class="float-right clearfix">进入NBA.com/China后，即表示阁下同意遵守NBA.com/China的隐私政策隐私政策和使用条款使用条款</span></div>
+
+            </div>
+
+            <div>
+				<span> 有任何的建议和意见，都欢迎联络我们NBAChinaInfo@nba.com</span>
+
+                <span class="float-right clearfix"> 有关NBA商品授权合作事宜，敬请联系:GMGChinaBusinessInquiry@nba.com</span>
+            </div>
+            <div>
+                <hr/>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

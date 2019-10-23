@@ -1,0 +1,125 @@
+@charset "UTF-8";
+/*变量*/
+/*颜色变量*/
+/*数值变量*/
+/*字符串变量*/
+/*样式属性变量*/
+/*变量冲突问题*/
+div:before {
+  content: "abcdefg";
+  border: 16px solid #f10225; }
+
+#content {
+  font-size: 16px; }
+  #content .top {
+    border: 1px solid #f00; }
+  #content h1 {
+    font-style: italic; }
+  #content p {
+    color: #ff0000; }
+
+.bottom {
+  border: 1px solid #f00; }
+  .bottom p {
+    color: #00f; }
+    .bottom p a {
+      text-decoration: none; }
+
+a {
+  height: 2.5rem;
+  width: 8rem;
+  color: #0aa1ed; }
+  a:hover {
+    color: #fff; }
+
+/*属性嵌套*/
+div {
+  border-width: 10px;
+  border-style: solid;
+  border-color: #0062a9; }
+
+div {
+  width: 200px;
+  height: 200px;
+  background: red; }
+  div:hover {
+    background: yellow;
+    border-radius: 50%; }
+
+#mycolor {
+  color: #ff0000; }
+
+/*混合器*/
+div {
+  border: 3px solid #f00;
+  border-radius: 3px;
+  outline: 0; }
+
+p {
+  border: 3px solid #f00;
+  border-radius: 3px;
+  outline: 0; }
+
+a {
+  border: 3px solid #f00;
+  border-radius: 3px;
+  outline: 0; }
+
+div {
+  color: #002752;
+  background: -webkit-linear-gradient(top, #f00, #00f);
+  background: -o-linear-gradient(top, #f00, #00f);
+  background: -ms-linear-gradient(top, #f00, #00f);
+  background: -moz-linear-gradient(top, #f00, #00f); }
+
+/*继承*/
+.my_rounded, .child {
+  border: 1px solid #f00;
+  border-radius: 50%; }
+
+.child {
+  color: #00f; }
+
+.my-border, .my-bottom-border {
+  border: 1px solid transparent;
+  width: 400px;
+  margin-left: 20px; }
+
+.my-bottom-border {
+  border-bottom: #ff0000; }
+
+/*运算单位*/
+/*加号*/
+p:before {
+  content: "ABCabc";
+  font-family: cccaaa; }
+
+/*减号*/
+div {
+  width: 10px; }
+
+/*除法*/
+p {
+  font: 10px/5px;
+  width: 500px;
+  height: 250px;
+  margin-left: 9px; }
+
+/*颜色的计算*/
+div {
+  color: #ff2752;
+  background: #1e3246;
+  border-color: #393f45; }
+
+/*数学函数*/
+div:before {
+  content: "abc";
+  fout-size: 5rem; }
+
+/*自定义函数*/
+div {
+  width: 300px; }
+
+/*指令*/
+div {
+  color: #0ff; }

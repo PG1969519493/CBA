@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script>
+		function getReg(){
+			var $uname=phone.value;
+			var $upwd=upwd.value;
+			var $upwd1=upwd1.value;
+			var $phone=phone.value;
+			var $yzm=yzm.value;
+			var $sj=sjyzm.innerHTML;
+			var isC=0;
+			if(qq.checked==true){
+				isC=1;
+			}
+			if($upwd==$upwd1 && msg1.innerHTML=="当前手机号可用" && isC==1 && $yzm==$sj){
+				var xhr=new XMLHttpRequest();
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var result=xhr.responseText;
+						if(result==1){
+							alert("注册成功");
+							location.href="http://127.0.0.1:8080/login.html";
+						}
+						else
+							alert("注册失败");
+					}
+				}
+
+			}else if(isC!=1){
+				alert("请同意《用户注册协议》");
+				return;
+			}else{
+				alert("不满足注册条件");
+				return;
+			}
+
+
+
+				
+			if(!$uname){
+				pe.innerHTML="手机号不能为空";
+				return;
+			}
+			if(!$upwd){
+				upd.innerHTML="密码不能为空";
+				return;
+			}
+			if(!yzm){
+				yz.innerHTML="验证码不能为空"
+			}
+
+			xhr.open("post","/user/api/v1/reg",true);
+			var formdata="uname="+$uname+"&upwd="+$upwd+"&phone="+$phone;
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+			xhr.send(formdata);
+
+		}
+
+		function checkUname(){
+			var nm=phone.value;
+
+			if(nm==""){
+				msg1.innerHTML="电话不能为空";
+				return;
+			}else if(nm.length!=11){
+				msg1.innerHTML="手机号长度错误";
+				return;
+			}
+
+
+
+			var $phone=phone.value;
+			var xhr=new XMLHttpRequest();
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					var result=xhr.responseText;
+					if(result==1){
+						msg1.innerHTML="当前手机号可用";
+					}else{
+						msg1.innerHTML="当前手机号不可用";
+					}
+				}
+			};
+			xhr.open("get","/user/api/v1/isReg/"+$phone,true);
+			xhr.send();
+		}
+
+
+		function upwd_show(){
+			var $upwd=upwd.value;
+			if($upwd=='')
+				msg2.innerHTML="密码不能为空";
+			else
+				msg2.innerHTML="";
+		}
+		function upwd1_show(){
+			var $upwd=upwd.value;
+			var $upwd1=upwd1.value;
+			if($upwd1!=$upwd)
+				msg3.innerHTML="密码不同";
+			else
+				msg3.innerHTML="";
+		}
+		function yz_show(){
+			var $yz=yzm.value;
+			var $sj=sjyzm.innerHTML;
+			if($yz!=$sj){
+				msg4.innerHTML="验证码不同";
+			}else
+				msg4.innerHTML="";
+		}
+		function getYzm(){
+			var yzm=parseInt(Math.random()*8999+1000);
+			sjyzm.innerHTML=yzm;
+		}
+	</script>
+
+</head>
+<body onload="getYzm()">
+<div id="ym">
+    <div class="header d-flex justify-content-around ">
+        <div>
+            <ul class="d-flex justify-content-around m-4">
+ 			<li><a href="">首页</a></li>
+            <li><a href="">视频</a></li>
+            <li><a href="">新闻</a></li>
+            <li><a href="">图集</a></li>
+            <li><a href="">赛程</a></li>
+            <li><a href="">数据</a></li>
+            <li><a href="">NBA历史</a></li>
+            <li><a href="">NBA知识</a></li>
+            <li><a href="">全明星赛</a></li>
+            </ul>
+        </div>
+        <div class="p-4">
+			<img src="image/search_24px.png" alt=""/>
+            <span>
+                <a href="#">注册</a>
+                |
+                <a href="login.html">登录</a>
+            </span>
+        </div>
+    </div>
+    <div class="section">
+        <div></div>
+        <div id="hh">
+            <div>
+                <div class="mb-4 border-bottom" >
+					<div class="float-right" id="ig"><img src="image/img2018040401_ll.png" alt=""/></div>
+					手机注册
+				</div>
+								
+                <div class="f ">
+					<div class="hzm"><span id="msg1"></span></div>
+					<input type="text" id="phone" onblur="checkUname()"  placeholder="手机号" class="pl-3 iprd "/>
+				</div>
+								
+                <div class="f " >
+					<div class="hzm"><span id="msg2"></span></div>
+					<input type="password" id="upwd" onblur="upwd_show()"  placeholder="密码" class="pl-3 iprd"/>
+				</div>
+								
+                <div class="f ">
+					<div class="hzm"><span id="msg3"></span></div>
+					<input type="password" id="upwd1" onblur="upwd1_show()"  placeholder="确认密码" class="pl-3 iprd"/>
+				</div>
+
+				<div class="hzm"><span id="msg4"></span></div>
+                <div><input class="w-25" type="text" id="yzm" onblur="yz_show()"/><span id="sjyzm" onclick="getYzm()"></span><span id="kbq" onclick="getYzm()">&nbsp;&nbsp;&nbsp;&nbsp;看不清楚?换一张</span></div>
+                <div class="my-4"><button class="w-100 btn btn-primary" onclick="getReg()" >注册</button></div>
+                <div class="my-4">
+                    <input type="checkbox" id="qq"/><label for="qq">我已阅读并同意《用户注册协议》</label>
+                    <span id="aaa" class="float-right">已有账号？<a href="login.html">立即登录</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <div class="clearfix">
+                <div class="float-left" id="fa">
+					<a href="#" id="fta">关于我们</a>
+					<span>|</span>
+					<a href="#" id="fta2">招聘信息</a>
+					<span>|</span>
+					<a href="#" id="fta3">联系我们</a>
+					<span>|</span>
+					<a href="#" id="fta4">商务合作</a>
+				</div>
+				<div> <span class="float-right clearfix">进入NBA.com/China后，即表示阁下同意遵守NBA.com/China的隐私政策隐私政策和使用条款使用条款</span></div>
+
+            </div>
+
+            <div>
+				<span> 有任何的建议和意见，都欢迎联络我们NBAChinaInfo@nba.com</span>
+
+                <span class="float-right clearfix"> 有关NBA商品授权合作事宜，敬请联系:GMGChinaBusinessInquiry@nba.com</span>
+            </div>
+            <div>
+                <hr/>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

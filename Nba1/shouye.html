@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        *{margin: 0;padding: 0;}
+        body{
+            background: url(images/bg_2811f8.jpg) center 0 no-repeat;
+            padding: 15px 10px 0;
+        }
+         #header{
+            height:120px;
+            background:#006bb7;
+        }
+        #Y{
+            width:1200px;
+            height:80px;
+            margin:auto;
+            position:relative;
+        }
+        #Y>.b1{
+            width:250px;
+            height:71px;
+            position:absolute;
+            top:9px;
+            left:45px;
+        }
+        #Y>.b2{
+            width:60.7px;
+            height:25px;
+            position:absolute;
+            top:35px;
+            left:310px;
+        }
+         #Y>.b3{
+             position:absolute;
+             right:0px;
+             top:10px;
+         }
+         #Z{
+             width:1200px;
+             height:40px;
+             margin:auto;
+             position:relative;
+         }
+         #Z>#a1{
+              display:flex;
+             justify-content:space-around;
+             line-height:40px;
+             margin-left:20px;
+         }
+         #Z>#a1>a{
+             display:block;
+             color:#fff;
+             text-decoration:none;
+         }
+         #Z>#a2{
+             position:absolute;
+             right:0px;
+         }
+        #d1{
+            width: 1220px;
+            background: #ffffff;
+            position: relative;
+        }
+        #d3{
+            width: 1220px;
+            margin: 0 auto;
+            padding: 15px 10px 0;
+            background: #fff;
+            height: 380px;
+            position: relative;
+
+        }
+        #d3>ul{
+            float: left;
+            margin-left: 10px;
+        }
+        #d3>img{
+            width: 510px;
+            height: 348px;
+            float: left;
+        }
+        #d3>h3{
+            position: absolute;
+            bottom: 30px;
+            left: 45px;
+            font-weight: 400;
+            font-size: 20px;
+            color: #fff;
+        }
+        #d3>ul>li{
+            width: 360px;
+            height: 87px;
+            list-style: none;
+            border-bottom:2px solid #666666 ;
+            padding: 10px;
+        }
+        #d3>ul>li>img{
+            margin-right: 10px;
+            width: 92px;
+            height: 67px;
+            float: left;
+        }
+        #d3>ul>li>i{
+            margin-top: 10px;
+            font-style: normal;
+            font-size: 14px;
+        }
+        #d3>.a1{
+            width: 320px;
+            height: 348px;
+            float: left;
+            padding: 0 20px;
+        }
+        #d3>.a1>h5{
+            text-align: center;
+        }
+        #d3>.a1>p{
+            font-size: 15px;
+
+        }
+        h2{
+            width: 900px;
+            height: 39px;
+            line-height: 39px;
+            font-size: 16px;
+            font-weight: 400;
+            border-bottom: 1px solid #666666;
+            background: #fff;
+            display: flex;
+            justify-content:space-between;
+            padding: 0 10px;
+            margin: 0;
+            float: left;
+        }
+        h6{
+            width: 300px;
+            height: 40px;
+            float: left;
+            line-height: 40px;
+            text-align: center;
+            background-color: #2464b5;
+        }
+        h6>a{
+            color: #ffffff;
+            text-decoration: none;
+        }
+        #d2{
+            width: 900px;
+            height: 640px;
+            background: #fff;
+            padding-top: 30px ;
+        }
+        #d2>.a1>img{
+            width: 425px;
+            height: 314px;
+            margin: 10px;
+            transition: 1s;
+        }
+         #d2>.a1>img:hover{
+             transform:scale(1.1);
+         }
+        #d2>.a1>.img1{
+            margin-left: 0;
+        }
+        #d2>.a2>img{
+            width: 280px;
+            height: 200px;
+            margin: 10px;
+        }
+        #d2>.a2>.img2,#d2>.a2>.img3{
+            margin-left: 0;
+        }
+        #d1>.a3{
+            width: 300px;
+            height: 524px;
+            position: absolute;
+            top: 420px;
+            right: 19px;
+        }
+        h1{
+            width: 1200px;
+            height: 42px;
+            font-size: 22px;
+            color:#2464b5 ;
+            margin: -40px 0 30px;
+            padding: 10px 30px 10px;
+            border-bottom: 1px solid #666666;
+        }
+        #d4{
+            width: 1200px
+            height: 508px
+        }
+        #d4>.a1>img{
+            width: 286px;
+            height: 230px;
+            margin-left: 10px;
+            margin-top: 20px;
+        }
+        #d4>.a1>.a2>img{
+            width: 286px;
+            margin-left: 10px;
+        }
+        h4{
+            width: 1200px;
+            height: 41px;
+            text-align: center;
+            font-size: 20px;
+            border-bottom: 1px solid #666666;
+            margin-top: 20px;
+        }
+        #d5{
+            margin-bottom: 20px;
+        }
+        #d5>img{
+            width: 72px;
+            height: 60px;
+            margin-left: 10px;
+        }
+        .my_height{
+            height: 415px;
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+        <div id="Y">
+                <img class="b1" src="picture/nba-icon.png" alt="">
+                <img class="b2" src="picture/nba-com-icon (1).png" alt="">
+                <img class="b3"src="picture/1567596674(1).png" alt="">
+        </div>
+        <div id="Z">
+            <div id="a1">
+            <a href="/shouye.html">首页</a>
+            <a href="/shipin.html">视频</a>
+            <a href="/xinwen.html">新闻</a>
+            <a href="/tuji.html">图集</a>
+            <a href="/saicheng.html">赛程</a>
+            <a href="/shuju.html">数据</a>
+            <a href="/NBAlishi.html">NBA历史</a>
+            <a href="/NBAzhishi.html">NBA知识</a>
+            <a href="/quanmingxing.html">全明星赛</a>
+            <a href=""><img src="picture/1567598539(2).png" alt=""></a>
+            <a href="http://127.0.0.1:8080/reg.html"><img src="picture/1567598880(1).png" alt=""></a>
+        </div>
+    </div>
+<div class="container">
+          <div id="d1">
+              <div id="d3">
+                  <img src="picture/150516939.jpg" alt=""/>
+                  <h3>人生不止篮球&nbsp;退役转场的科比谱写锦绣华章</h3>
+                  <ul>
+                      <li>
+                          <img src="picture/150518473.jpg" alt=""/>
+                          <i>组图-似是故人来 盘点联盟历史7大久别重逢</i>
+                      </li>
+                      <li>
+                          <img src="picture/150518454.jpg" alt=""/>
+                          <i>命运兜转终迎救赎 揭秘霍华德重返湖人始末</i>
+                      </li>
+                      <li>
+                          <img src="picture/150518180.jpg" alt=""/>
+                          <i>霍华德和灰熊达成买断协议 澄清期后加盟湖人</i>
+                      </li>
+                      <li>
+                          <img src="picture/150516730.jpg" alt=""/>
+                          <i>人生不止篮球 退役转场的科比谱写锦绣华章</i>
+                      </li>
+                  </ul>
+                  <div class="a1">
+                      <h5>今日要闻</h5>
+                      <p>美国时间8月23日是湖人名宿科比-布莱恩特41岁的生日，多位球星更新社交媒体，给这位巨星送上生日祝福。湖人球星勒布朗-詹姆斯就在社交媒体上写道：“科比-布莱恩特&黑曼巴生日快乐！#传奇#偶像#史上最伟大 湖人国度雄起。”科比和詹姆斯是联盟过去20年公认最伟大的两名球星，两人惺惺相惜，总共拿下8个NBA总冠军和5个常规赛MVP。2018年夏天詹姆斯宣布加盟湖人，两大球星同时被贴上了“湖人”的标签。科比在湖人效力20年5次夺冠，早已是队史最伟大的球星之一，在世界范围内他都是极受爱戴的巨星。</p>
+                  </div>
+              </div>
+                  <h2>
+                      <a href="/shouye_1.html">最新资讯</a>
+                      <a href="">添加主队</a>
+                  </h2>
+                  <h6>
+                      <a href="">联盟排名</a>
+                  </h6>
+                  <div id="d2">
+                      <div class="a1">
+                          <img src="picture/150518480.png" alt=""/>
+                          <img class="img1" src="picture/150518473.jpg" alt=""/>
+                      </div>
+                      <div class="a2">
+                          <img src="picture/150518451.jpg" alt=""/>
+                          <img class="img2" src="picture/150518505.jpg" alt=""/>
+                          <img class="img3" src="picture/150518503.jpg" alt=""/>
+                  </div>
+                  </div>
+                      <img class="a3" src="picture/1.png" alt=""/>
+                  <div id="d4">
+                      <h1>专题</h1>
+                      <div class="a1">
+                          <img src="picture/150394145.jpg" alt=""/>
+                          <img src="picture/150336703.jpg" alt=""/>
+                          <img src="picture/150356313.jpg" alt=""/>
+                          <img src="picture/148521298.jpg" alt=""/>
+                          <div class="a2">
+                              <img src="picture/148521174.png" alt=""/>
+                              <img src="picture/150317643.jpg" alt=""/>
+                              <img src="picture/150356610.jpg" alt=""/>
+                              <img src="picture/148521305.jpg" alt=""/>
+                          </div>
+                      </div>
+                      <div class="a1">
+                          <img src="picture/150394145.jpg" alt=""/>
+                          <img src="picture/150336703.jpg" alt=""/>
+                          <img src="picture/150356313.jpg" alt=""/>
+                          <img src="picture/148521298.jpg" alt=""/>
+                          <div class="a2">
+                              <img src="picture/148521174.png" alt=""/>
+                              <img src="picture/150317643.jpg" alt=""/>
+                              <img src="picture/150356610.jpg" alt=""/>
+                              <img src="picture/148521305.jpg" alt=""/>
+                          </div>
+                      </div>
+                  </div>
+              <h4>NBA&nbsp;&nbsp;官方球队</h4>
+              <div id="d5">
+                  <img src="picture/76ers_085e6e.png" alt=""/>
+                  <img src="picture/bulls_c6bdba.png" alt=""/>
+                  <img src="picture/cavaliers_f4cf30.png" alt=""/>
+                  <img src="picture/celtics_2b52a5.png" alt=""/>
+                  <img src="picture/grizzlies_66e18a.png" alt=""/>
+                  <img src="picture/heat_5a819b.png" alt=""/>
+                  <img src="picture/lakers_cdf357.png" alt=""/>
+                  <img src="picture/kings_071837.png" alt=""/>
+                  <img src="picture/bucks_b35644.png" alt=""/>
+                  <img src="picture/warriors_e7bdd8.png" alt=""/>
+                  <img src="picture/nets_40aa67.png" alt=""/>
+                  <img src="picture/pelicans_93bfd8.png" alt=""/>
+                  <img src="picture/spurs_1a515b.png" alt=""/>
+                  <img src="picture/suns_fd0119.png" alt=""/>
+              </div>
+    </div>
+</div>
+    <iframe class="w-100 my_height" src="footer.html" frameborder="0" scrolling="no"></iframe>
+</body>
+</html>

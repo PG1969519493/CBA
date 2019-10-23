@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <style>
+        *{margin: 0;padding: 0;}
+        body{
+            color: #000000;
+            background: rgb(246, 246, 246);
+        }
+         #header{
+            height:120px;
+            background:#006bb7;
+        }
+        #Y{
+            width:1200px;
+            height:80px;
+            margin:auto;
+            position:relative;
+        }
+        #Y>.b1{
+            width:250px;
+            height:71px;
+            position:absolute;
+            top:9px;
+            left:45px;
+        }
+        #Y>.b2{
+            width:60.7px;
+            height:25px;
+            position:absolute;
+            top:35px;
+            left:310px;
+        }
+         #Y>.b3{
+             position:absolute;
+             right:0px;
+             top:10px;
+         }
+         #Z{
+             width:1200px;
+             height:40px;
+             margin:auto;
+             position:relative;
+         }
+         #Z>#a1{
+              display:flex;
+             justify-content:space-around;
+             line-height:40px;
+             margin-left:20px;
+         }
+         #Z>#a1>a{
+             display:block;
+             color:#fff;
+             text-decoration:none;
+         }
+         #Z>#a2{
+             position:absolute;
+             right:0px;
+         }
+        #d1{
+            width: 1200px;
+            height: 60px;
+            font-size: 14px;
+            line-height: 50px;
+        }
+        #d2{
+            width: 1200px;
+            height: 50px;
+            background-color: #0f6db4;
+            color: #fff;
+        }
+        #d2>span{
+            font-size: 1.5rem;
+            line-height: 50px;
+            padding-left: 15px;
+        }
+        #d3>table{
+            width: 1200px;
+            background: #ffffff;
+            margin-bottom: 50px;
+        }
+        #d3>table th{
+            color:#ffffff;
+            background: #032F4F;
+            padding: 14px 6px 10px;
+        }
+        #d3>table td{
+            text-align: center;
+            padding: 9px 6px;
+        }
+        #d3>table .a1{
+            background-color: rgba(146,144,144,.2)
+        }
+        #d4{
+            width: 1000px;
+            height: 400px;
+            background: #ffffff;
+            margin: auto;
+        }
+        .ball1,.ball2{
+            width: 470px;
+            height: 309px;
+            float: left;
+        }
+        .ball1 h2,.ball2 h2{
+            width: 470px;
+            height: 35px;
+            font-size: 16px;
+            text-align: center;
+            padding-top: 18px;
+        }
+        .ball1 img,.ball2 img{
+            width: 80px;
+            height: 80px;
+            margin: 12px 5px;
+        }
+        .ball2{
+            margin-left: 30px ;
+        }
+         .my_height{
+            width:100%;
+            height: 415px;
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+        <div id="Y">
+                <img class="b1" src="picture/nba-icon.png" alt="">
+                <img class="b2" src="picture/nba-com-icon (1).png" alt="">
+                <img class="b3"src="picture/1567596674(1).png" alt="">
+        </div>
+        <div id="Z">
+            <div id="a1">
+            <a href="">首页</a>
+            <a href="/shipin.html">视频</a>
+            <a href="/xinwen.html">新闻</a>
+            <a href="/tuji.html">图集</a>
+            <a href="/saicheng.html">赛程</a>
+            <a href="/shuju.html">数据</a>
+            <a href="/NBAlishi.html">NBA历史</a>
+            <a href="/NBAzhishi.html">NBA知识</a>
+            <a href="/quanmingxing.html">全明星赛</a>
+            <a href=""><img src="picture/1567598539(2).png" alt=""></a>
+            <a href=""><img src="picture/1567598880(1).png" alt=""></a>
+        </div>
+    </div>
+<div class="container">
+        <div id="d1">
+            <span>首页/联盟球员数据排名</span>
+        </div>
+        <div id="d2">
+            <span>赛季数据</span>
+        </div>
+        <div id="d3">
+            <table>
+                <tr>
+                    <th>排名</th>
+                    <th>球员</th>
+                    <th>球队</th>
+                    <th>场数</th>
+                    <th>先发</th>
+                    <th>场均篮板</th>
+                    <th>场均助攻</th>
+                    <th>分钟</th>
+                    <th>效率</th>
+                    <th>%</th>
+                    <th>三分%</th>
+                    <th>罚球%</th>
+                    <th>进攻</th>
+                    <th>防守</th>
+                    <th>场均抢断</th>
+                    <th>场均盖帽</th>
+                    <th>失误</th>
+                    <th>犯规</th>
+                    <th>场均得分S</th>
+                </tr>
+                <tr class="a1">
+                <td>1</td>
+                <td>杜兰特</td>
+                <td>勇士</td>
+                <td>12</td>
+                <td>12</td>
+                <td>4.9</td>
+                <td>4.5</td>
+                <td>36.8</td>
+                <td>29.4</td>
+                <td>51.4</td>
+                <td>43.8</td>
+                <td>90.3</td>
+                <td>0.1</td>
+                <td>4.8</td>
+                <td>1.1</td>
+                <td>1</td>
+                <td>3.6</td>
+                <td>3.2</td>
+                <td>32.3</td>
+            </tr>
+                <tr>
+                    <td>1</td>
+                    <td>杜兰特</td>
+                    <td>勇士</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>4.9</td>
+                    <td>4.5</td>
+                    <td>36.8</td>
+                    <td>29.4</td>
+                    <td>51.4</td>
+                    <td>43.8</td>
+                    <td>90.3</td>
+                    <td>0.1</td>
+                    <td>4.8</td>
+                    <td>1.1</td>
+                    <td>1</td>
+                    <td>3.6</td>
+                    <td>3.2</td>
+                    <td>32.3</td>
+                </tr>
+                <tr class="a1">
+                    <td>1</td>
+                    <td>杜兰特</td>
+                    <td>勇士</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>4.9</td>
+                    <td>4.5</td>
+                    <td>36.8</td>
+                    <td>29.4</td>
+                    <td>51.4</td>
+                    <td>43.8</td>
+                    <td>90.3</td>
+                    <td>0.1</td>
+                    <td>4.8</td>
+                    <td>1.1</td>
+                    <td>1</td>
+                    <td>3.6</td>
+                    <td>3.2</td>
+                    <td>32.3</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>杜兰特</td>
+                    <td>勇士</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>4.9</td>
+                    <td>4.5</td>
+                    <td>36.8</td>
+                    <td>29.4</td>
+                    <td>51.4</td>
+                    <td>43.8</td>
+                    <td>90.3</td>
+                    <td>0.1</td>
+                    <td>4.8</td>
+                    <td>1.1</td>
+                    <td>1</td>
+                    <td>3.6</td>
+                    <td>3.2</td>
+                    <td>32.3</td>
+                </tr>
+                <tr class="a1">
+                    <td>1</td>
+                    <td>杜兰特</td>
+                    <td>勇士</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>4.9</td>
+                    <td>4.5</td>
+                    <td>36.8</td>
+                    <td>29.4</td>
+                    <td>51.4</td>
+                    <td>43.8</td>
+                    <td>90.3</td>
+                    <td>0.1</td>
+                    <td>4.8</td>
+                    <td>1.1</td>
+                    <td>1</td>
+                    <td>3.6</td>
+                    <td>3.2</td>
+                    <td>32.3</td>
+                </tr>
+                <tr>
+                <td>1</td>
+                <td>杜兰特</td>
+                <td>勇士</td>
+                <td>12</td>
+                <td>12</td>
+                <td>4.9</td>
+                <td>4.5</td>
+                <td>36.8</td>
+                <td>29.4</td>
+                <td>51.4</td>
+                <td>43.8</td>
+                <td>90.3</td>
+                <td>0.1</td>
+                <td>4.8</td>
+                <td>1.1</td>
+                <td>1</td>
+                <td>3.6</td>
+                <td>3.2</td>
+                <td>32.3</td>
+            </tr>
+                <tr class="a1">
+                    <td>1</td>
+                    <td>杜兰特</td>
+                    <td>勇士</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>4.9</td>
+                    <td>4.5</td>
+                    <td>36.8</td>
+                    <td>29.4</td>
+                    <td>51.4</td>
+                    <td>43.8</td>
+                    <td>90.3</td>
+                    <td>0.1</td>
+                    <td>4.8</td>
+                    <td>1.1</td>
+                    <td>1</td>
+                    <td>3.6</td>
+                    <td>3.2</td>
+                    <td>32.3</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>杜兰特</td>
+                    <td>勇士</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>4.9</td>
+                    <td>4.5</td>
+                    <td>36.8</td>
+                    <td>29.4</td>
+                    <td>51.4</td>
+                    <td>43.8</td>
+                    <td>90.3</td>
+                    <td>0.1</td>
+                    <td>4.8</td>
+                    <td>1.1</td>
+                    <td>1</td>
+                    <td>3.6</td>
+                    <td>3.2</td>
+                    <td>32.3</td>
+                </tr>
+                <tr class="a1">
+                    <td>1</td>
+                    <td>杜兰特</td>
+                    <td>勇士</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>4.9</td>
+                    <td>4.5</td>
+                    <td>36.8</td>
+                    <td>29.4</td>
+                    <td>51.4</td>
+                    <td>43.8</td>
+                    <td>90.3</td>
+                    <td>0.1</td>
+                    <td>4.8</td>
+                    <td>1.1</td>
+                    <td>1</td>
+                    <td>3.6</td>
+                    <td>3.2</td>
+                    <td>32.3</td>
+                </tr>
+                <tr>
+                <td>1</td>
+                <td>杜兰特</td>
+                <td>勇士</td>
+                <td>12</td>
+                <td>12</td>
+                <td>4.9</td>
+                <td>4.5</td>
+                <td>36.8</td>
+                <td>29.4</td>
+                <td>51.4</td>
+                <td>43.8</td>
+                <td>90.3</td>
+                <td>0.1</td>
+                <td>4.8</td>
+                <td>1.1</td>
+                <td>1</td>
+                <td>3.6</td>
+                <td>3.2</td>
+                <td>32.3</td>
+            </tr>
+                <tr class="a1">
+                <td>1</td>
+                <td>杜兰特</td>
+                <td>勇士</td>
+                <td>12</td>
+                <td>12</td>
+                <td>4.9</td>
+                <td>4.5</td>
+                <td>36.8</td>
+                <td>29.4</td>
+                <td>51.4</td>
+                <td>43.8</td>
+                <td>90.3</td>
+                <td>0.1</td>
+                <td>4.8</td>
+                <td>1.1</td>
+                <td>1</td>
+                <td>3.6</td>
+                <td>3.2</td>
+                <td>32.3</td>
+            </tr>
+                <tr>
+                    <td>1</td>
+                    <td>杜兰特</td>
+                    <td>勇士</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>4.9</td>
+                    <td>4.5</td>
+                    <td>36.8</td>
+                    <td>29.4</td>
+                    <td>51.4</td>
+                    <td>43.8</td>
+                    <td>90.3</td>
+                    <td>0.1</td>
+                    <td>4.8</td>
+                    <td>1.1</td>
+                    <td>1</td>
+                    <td>3.6</td>
+                    <td>3.2</td>
+                    <td>32.3</td>
+                </tr>
+            </table>
+        </div>
+        <div id="d4">
+            <div class="ball1">
+                <h2>_____西部球队_____</h2>
+                <img src="picture/thunder_768d92.png" alt=""/>
+                <img src="picture/lakers_cdf357.png" alt=""/>
+                <img src="picture/spurs_1a515b.png" alt=""/>
+                <img src="picture/kings_071837.png" alt=""/>
+                <img src="picture/rockets_9952e2.png" alt=""/>
+                <img src="picture/thunder_768d92.png" alt=""/>
+                <img src="picture/lakers_cdf357.png" alt=""/>
+                <img src="picture/spurs_1a515b.png" alt=""/>
+                <img src="picture/kings_071837.png" alt=""/>
+                <img src="picture/rockets_9952e2.png" alt=""/>
+                <img src="picture/thunder_768d92.png" alt=""/>
+                <img src="picture/lakers_cdf357.png" alt=""/>
+                <img src="picture/spurs_1a515b.png" alt=""/>
+                <img src="picture/kings_071837.png" alt=""/>
+                <img src="picture/rockets_9952e2.png" alt=""/>
+            </div>
+            <div class="ball2">
+                <h2>_____东部球队_____</h2>
+                <img src="picture/nets_40aa67.png" alt=""/>
+                <img src="picture/cavaliers_f4cf30.png" alt=""/>
+                <img src="picture/bulls_c6bdba.png" alt=""/>
+                <img src="picture/raptors_7c67f7.png" alt=""/>
+                <img src="picture/hornets_d83cc8.png" alt=""/>
+                <img src="picture/nets_40aa67.png" alt=""/>
+                <img src="picture/cavaliers_f4cf30.png" alt=""/>
+                <img src="picture/bulls_c6bdba.png" alt=""/>
+                <img src="picture/raptors_7c67f7.png" alt=""/>
+                <img src="picture/hornets_d83cc8.png" alt=""/>
+                <img src="picture/nets_40aa67.png" alt=""/>
+                <img src="picture/cavaliers_f4cf30.png" alt=""/>
+                <img src="picture/bulls_c6bdba.png" alt=""/>
+                <img src="picture/raptors_7c67f7.png" alt=""/>
+                <img src="picture/hornets_d83cc8.png" alt=""/>
+            </div>
+        </div>
+</div>
+<iframe class=" my_height" src="footer.html" frameborder="0" scrolling="no"></iframe>
+</body>
+</html>
